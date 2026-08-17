@@ -28,6 +28,7 @@ jobs:
       - name: Preparar sitio
         run: |
           touch web/.nojekyll
+          mkdir -p web/data
           printf '%s\n' "${{ github.sha }}" > web/data/build.txt
       - name: Subir artefacto Pages
         uses: actions/upload-pages-artifact@v3
