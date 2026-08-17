@@ -1,0 +1,27 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Local editor files
+.vs/
+*.csproj
+*.sln
+*.userprefs
+
+# Generated web release packages (publish these as GitHub Release assets)
+web/downloads/ProyectoGenesis-Windows/
+web/downloads/ProyectoGenesis-macOS/
+web/downloads/*.zip
+!web/downloads/ProyectoGenesis-Windows.zip
+!web/downloads/ProyectoGenesis-macOS.zip
+
+# PDF review scratch files
+tmp/
+
+# GitHub Release asset (over GitHub's 100 MB repository blob limit)
+web/assets/media/inicio.mp4

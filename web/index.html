@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proyecto Génesis: conecta, descifra y descubre la verdad.">
+  <title>Proyecto Génesis | Archivo de Operación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Proyecto Génesis, inicio">
+      <span class="brand-mark">G</span>
+      <span><strong>PROYECTO</strong><b>GÉNESIS</b></span>
+    </a>
+    <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" title="Abrir menú"><span>☰</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#historia">Historia</a>
+      <a href="#personajes">Personajes</a>
+      <a href="#misiones">Misiones</a>
+      <a href="#descargas">Descargas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-button" type="button" aria-label="Abrir búsqueda" title="Buscar">⌕</button>
+      <button class="avatar-button" id="profile-button" type="button" aria-label="Abrir perfil" title="Perfil">DR</button>
+    </div>
+  </header>
+
+  <div class="breadcrumbs" aria-label="Migas de pan">
+    <span>ARCHIVO</span><span class="crumb-separator">/</span><a href="#inicio">GÉNESIS</a><span class="crumb-separator">/</span><span>PORTAL PÚBLICO</span>
+  </div>
+
+  <main>
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> TRANSMISIÓN ABIERTA · 2087</div>
+        <h1 id="hero-title">CONECTA.<br><em>DESCIFRA.</em><br>DESCUBRE LA VERDAD.</h1>
+        <p class="hero-lede">La ciudad cayó. La señal sigue viva. Entra al archivo de <strong>Proyecto Génesis</strong>, resuelve los sistemas que quedaron atrás y decide qué merece sobrevivir.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#descargas">JUGAR AHORA <span>↗</span></a>
+          <a class="button button-ghost" href="#historia">VER LA HISTORIA <span>▶</span></a>
+        </div>
+        <div class="hero-meta"><span><b>TIPO</b> Aventura narrativa / puzzles</span><span><b>ESTADO</b> Señal estable</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame"><img src="assets/scenes/city.jpg" alt="Ciudad futurista en ruinas iluminada en violeta y naranja"></div>
+        <div class="hero-logo"><img src="assets/game-logo.png" alt="Logo Proyecto Génesis"></div>
+        <div class="hero-signal signal-one">SIGNAL // 004</div>
+        <div class="hero-signal signal-two">CORE STATUS <span>ONLINE</span></div>
+        <div class="reticle reticle-a"></div><div class="reticle reticle-b"></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Estado de la red">
+      <div>✦ PROYECTO GÉNESIS</div><div>✦ CONEXIÓN ESTABLE</div><div>✦ 03 NIVELES · 09 MISIONES</div><div>✦ RESTAURA LA VERDAD</div>
+    </section>
+
+    <section class="section-shell split-layout" id="historia">
+      <aside class="sidebar panel" aria-label="Filtros y navegación secundaria">
+        <div class="panel-heading"><span>FILTROS DE ARCHIVO</span><span class="live-badge">LIVE</span></div>
+        <label class="search-field"><span>⌕</span><input id="archive-search" type="search" placeholder="Buscar archivo..." autocomplete="off"></label>
+        <div class="sidebar-group">
+          <span class="field-label">CLASIFICACIÓN</span>
+          <label class="check-row"><input type="checkbox" checked><span>Aventura</span><b>09</b></label>
+          <label class="check-row"><input type="checkbox" checked><span>Puzzle</span><b>09</b></label>
+          <label class="check-row"><input type="checkbox"><span>Cinemática</span><b>04</b></label>
+        </div>
+        <div class="sidebar-group">
+          <span class="field-label">SEÑAL</span>
+          <label class="radio-row"><input type="radio" name="signal" checked><span>Todos los registros</span></label>
+          <label class="radio-row"><input type="radio" name="signal"><span>Confirmados</span></label>
+          <label class="radio-row"><input type="radio" name="signal"><span>Interferencias</span></label>
+        </div>
+        <div class="meter-block"><div class="meter-label"><span>ARCHIVO INDEXADO</span><b>78%</b></div><progress value="78" max="100">78%</progress></div>
+        <button class="button button-secondary full-width" id="refresh-archive" type="button">↻ ACTUALIZAR ARCHIVO</button>
+      </aside>
+
+      <div class="content-column">
+        <div class="section-heading"><div><span class="kicker">01 / EL REGISTRO</span><h2>La historia detrás de la señal</h2></div><span class="section-index">H-001</span></div>
+        <div class="tab-list" role="tablist" aria-label="Archivos de historia">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-history" data-tab="tab-history">EL INCIDENTE</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-genesis" data-tab="tab-genesis">GÉNESIS</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-factions" data-tab="tab-factions">FACciones</button>
+        </div>
+        <div class="tab-panel active" id="tab-history" role="tabpanel">
+          <p>En 2087, la corporación Génesis prometió una nueva era para una humanidad agotada. Cuando el núcleo central dejó de responder, la ciudad se convirtió en un laberinto de ruinas, terminales apagadas y memorias incompletas.</p>
+          <p>Ahora una transmisión imposible atraviesa los sectores abandonados. Tú eres <strong>Elian Voss</strong>, un explorador de sistemas con una pregunta: ¿la caída fue un accidente o alguien escribió el final antes de tiempo?</p>
+          <div class="quote-card"><span class="quote-mark">“</span><p>Conecta. Descifra. Descubre la verdad.</p><small>— Fragmento recuperado del protocolo Génesis</small></div>
+        </div>
+        <div class="tab-panel" id="tab-genesis" role="tabpanel" hidden><p>El Proyecto Génesis es una red de restauración diseñada para reiniciar las ciudades tras el colapso. Cada misión recupera una pieza del protocolo: servidores, memoria, color y energía.</p><div class="tag-list"><span class="tag">PROTOCOLO 7</span><span class="tag">NÚCLEO ACTIVO</span><span class="tag">DATOS FRAGMENTADOS</span></div></div>
+        <div class="tab-panel" id="tab-factions" role="tabpanel" hidden><p>La Corporación Génesis controla la infraestructura que queda. Los Restantes protegen las ruinas y una señal desconocida guía a quienes aún buscan respuestas.</p><div class="alert alert-warning">⚠ No todos los registros fueron escritos por humanos.</div></div>
+
+        <div class="timeline" aria-label="Línea de tiempo de la historia">
+          <div class="timeline-item"><span class="timeline-point">01</span><div><small>2079 · PRIMER CONTACTO</small><h3>La señal aparece</h3><p>Una frecuencia desconocida se sincroniza con el núcleo de Génesis.</p></div></div>
+          <div class="timeline-item"><span class="timeline-point">02</span><div><small>2087 · EL SILENCIO</small><h3>La ciudad cae</h3><p>El sistema central corta todas las comunicaciones y borra los registros públicos.</p></div></div>
+          <div class="timeline-item"><span class="timeline-point">03</span><div><small>AHORA · RECUPERACIÓN</small><h3>Tu misión comienza</h3><p>La transmisión vuelve a emitir coordenadas. Cada respuesta abre una puerta.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell media-section" id="historia-video">
+      <div class="section-heading"><div><span class="kicker">02 / TRANSMISIÓN</span><h2>La historia en movimiento</h2></div><button class="button button-secondary" id="open-video" type="button">ABRIR EN PANTALLA COMPLETA ↗</button></div>
+      <div class="media-grid">
+        <div class="video-card panel"><video id="story-video" controls preload="metadata" poster="assets/scenes/city.jpg"><source src="https://github.com/aketzaliramirez277-arch/proyecto-genesis/releases/download/v1.0.0/inicio.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><div class="video-caption"><span><i class="status-dot"></i> INICIO.mp4 · TRANSMISIÓN 001</span><span>1080p / AUDIO ACTIVO</span></div></div>
+        <div class="signal-card panel"><span class="kicker">REPORTE DE CAMPO</span><h3>Una ciudad que todavía recuerda</h3><p>Observa la introducción antes de entrar. El video contiene las coordenadas del primer punto de acceso.</p><div class="waveform" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><audio controls preload="none"><source src="assets/media/ambience.mp3" type="audio/mpeg">Audio no disponible.</audio><button class="button button-ghost full-width" id="transmission-alert" type="button">⊙ ESCANEAR TRANSMISIÓN</button></div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="personajes">
+      <div class="section-heading"><div><span class="kicker">03 / PERSONAL AUTORIZADO</span><h2>Personajes principales</h2></div><div class="carousel-controls"><button class="icon-button" data-carousel="prev" aria-label="Personaje anterior">←</button><button class="icon-button" data-carousel="next" aria-label="Personaje siguiente">→</button></div></div>
+      <div class="character-grid" id="character-carousel">
+        <article class="character-card panel"><div class="character-image"><img src="assets/characters/elian.png" alt="Elian Voss, explorador de sistemas"><span class="character-code">GV-01</span></div><div class="character-body"><span class="tag">PROTAGONISTA</span><h3>Elian Voss</h3><p>Explorador de sistemas y antiguo técnico de Génesis. Puede leer los patrones que otros consideran ruido.</p><div class="skill"><span>INTEGRIDAD</span><progress value="88" max="100">88%</progress></div></div></article>
+        <article class="character-card panel"><div class="character-image"><img src="assets/characters/lira.png" alt="Lira Vale, analista de señales"><span class="character-code">SV-02</span></div><div class="character-body"><span class="tag tag-pink">ALIADA</span><h3>Lira Vale</h3><p>Analista de señales con memoria fotográfica. Su canal es la única conexión estable con el núcleo.</p><div class="skill"><span>PRECISIÓN</span><progress value="94" max="100">94%</progress></div></div></article>
+      </div>
+      <div class="carousel-dots" aria-label="Posición del carrusel"><button class="active" data-dot="0" aria-label="Mostrar personaje 1"></button><button data-dot="1" aria-label="Mostrar personaje 2"></button></div>
+    </section>
+
+    <section class="section-shell missions-section" id="misiones">
+      <div class="section-heading"><div><span class="kicker">04 / CARTOGRAFÍA DE OPERACIONES</span><h2>Mapa interactivo de misiones</h2></div><span class="badge">NIVEL 01–03</span></div>
+      <div class="map-layout">
+        <div class="map-panel panel" aria-label="Mapa de la ciudad con puntos de misión">
+          <div class="map-grid-lines"></div><div class="map-city-shape shape-a"></div><div class="map-city-shape shape-b"></div><div class="map-city-shape shape-c"></div>
+          <button class="map-point point-a active" data-mission="m1" aria-label="Misión 1: Servidor perdido"><span>01</span></button><button class="map-point point-b" data-mission="m2" aria-label="Misión 2: Código cromático"><span>02</span></button><button class="map-point point-c" data-mission="m3" aria-label="Misión 3: Núcleo Génesis"><span>03</span></button>
+          <div class="map-label label-a">SECTOR A / SERVIDOR</div><div class="map-label label-b">SECTOR B / CROMA</div><div class="map-label label-c">SECTOR C / NÚCLEO</div><div class="map-coordinates">43°11'08" N<br>74°00'22" W</div>
+        </div>
+        <div class="mission-details panel"><div class="mission-header"><span class="tag">OPERACIÓN ACTIVA</span><span class="mission-status">● DISPONIBLE</span></div><div id="mission-m1" class="mission-copy active"><span class="kicker">NIVEL 01 · MISIÓN 01</span><h3>El servidor perdido</h3><p>Recupera la memoria del servidor que mantiene en pie los accesos de la ciudad. Tendrás que ensamblar una red antes de que el sistema se bloquee.</p><ul class="feature-list"><li>Rompecabezas de ensamblaje</li><li>Exploración de archivo abandonado</li><li>Primera coordenada del núcleo</li></ul></div><div id="mission-m2" class="mission-copy" hidden><span class="kicker">NIVEL 02 · MISIÓN 02</span><h3>Código cromático</h3><p>Las terminales responden a una secuencia de color que alguien dejó oculta en los edificios del sector B.</p><ul class="feature-list"><li>Patrones de color</li><li>Señales intermitentes</li><li>Acceso al observatorio</li></ul></div><div id="mission-m3" class="mission-copy" hidden><span class="kicker">NIVEL 03 · MISIÓN 03</span><h3>El núcleo Génesis</h3><p>Enciende los interruptores y decide si el protocolo debe reiniciarse o permanecer dormido.</p><ul class="feature-list"><li>Circuito de validación</li><li>Decisión final</li><li>Dos lecturas posibles</li></ul></div><button class="button button-primary full-width" id="mission-cta" type="button">ABRIR ARCHIVO DE MISIÓN ↗</button></div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="galeria">
+      <div class="section-heading"><div><span class="kicker">05 / EVIDENCIA VISUAL</span><h2>Galería de sectores</h2></div><div class="carousel-controls"><button class="icon-button" id="gallery-prev" aria-label="Imagen anterior">←</button><button class="icon-button" id="gallery-next" aria-label="Imagen siguiente">→</button></div></div>
+      <div class="gallery-feature panel"><img id="gallery-main" src="assets/scenes/sector-01.png" alt="Sector azul abandonado de Proyecto Génesis"><div class="gallery-caption"><span id="gallery-title">SECTOR 01 / CÚPULA AZUL</span><span id="gallery-counter">01 / 04</span></div></div>
+      <div class="gallery-thumbs"><button class="gallery-thumb active" data-image="assets/scenes/sector-01.png" data-title="SECTOR 01 / CÚPULA AZUL"><img src="assets/scenes/sector-01.png" alt="Miniatura de la cúpula azul"></button><button class="gallery-thumb" data-image="assets/scenes/sector-02.png" data-title="SECTOR 02 / ARCHIVO ÁMBAR"><img src="assets/scenes/sector-02.png" alt="Miniatura del archivo ámbar"></button><button class="gallery-thumb" data-image="assets/scenes/sector-03.png" data-title="SECTOR 03 / TERMINAL DELTA"><img src="assets/scenes/sector-03.png" alt="Miniatura de la terminal Delta"></button><button class="gallery-thumb" data-image="assets/scenes/sector-04.png" data-title="SECTOR 04 / DISTRITO CREPÚSCULO"><img src="assets/scenes/sector-04.png" alt="Miniatura del distrito crepúsculo"></button></div>
+    </section>
+
+    <section class="section-shell downloads-section" id="descargas">
+      <div class="section-heading"><div><span class="kicker">06 / ACCESO AL JUEGO</span><h2>Descarga la experiencia</h2></div><span class="badge badge-green">GRATUITO</span></div>
+      <div class="download-grid"><article class="download-card panel"><div class="os-icon windows">⊞</div><div><span class="kicker">BUILD 1.0.0 · x64</span><h3>Windows</h3><p>Ejecutable para Windows 10/11. Descarga el archivo, descomprímelo y abre <code>ProyectoGenesis.exe</code>.</p><div class="download-meta"><span>▣ 1.2 GB</span><span>◉ ZIP</span></div></div><a class="button button-primary full-width" href="downloads/ProyectoGenesis-Windows.zip" download>DESCARGAR PARA WINDOWS ↓</a></article><article class="download-card panel"><div class="os-icon apple">●</div><div><span class="kicker">BUILD 1.0.0 · UNIVERSAL</span><h3>macOS</h3><p>Aplicación para macOS Intel y Apple Silicon. Abre el paquete desde Finder y autoriza la app si Gatekeeper lo solicita.</p><div class="download-meta"><span>▣ 1.3 GB</span><span>◉ ZIP</span></div></div><a class="button button-primary full-width" href="downloads/ProyectoGenesis-macOS.zip" download>DESCARGAR PARA MACOS ↓</a></article></div>
+      <div class="alert alert-info"><span>ⓘ</span><div><strong>Nota de instalación</strong><p>Los enlaces se activan cuando los builds están publicados en <code>web/downloads</code>. En macOS, si el sistema bloquea la app, usa clic derecho → Abrir la primera vez.</p></div></div>
+    </section>
+
+    <section class="section-shell extras-grid">
+      <article class="panel faq-card" id="faq"><div class="section-heading compact"><div><span class="kicker">07 / SOPORTE</span><h2>Preguntas frecuentes</h2></div></div><details open><summary>¿Necesito internet para jugar?</summary><p>No. La campaña se instala localmente; solo necesitas internet para descargar el build.</p></details><details><summary>¿Hay decisiones diferentes?</summary><p>Sí. La lectura de la señal cambia según los archivos que decidas restaurar en el núcleo.</p></details><details><summary>¿Cómo reporto un error?</summary><p>Usa el correo de contacto al final de esta página e indica tu sistema operativo y misión.</p></details></article>
+      <article class="panel checkout-card" id="checkout"><div class="section-heading compact"><div><span class="kicker">08 / MOCKUP</span><h2>Registro de descarga</h2></div><span class="tag">$0.00</span></div><div class="checkout-layout"><form id="checkout-form"><label class="field-label">Nombre completo<input type="text" placeholder="Tu nombre"></label><label class="field-label">Correo<input type="email" placeholder="correo@ejemplo.com"></label><label class="field-label">Sistema operativo<select><option>Windows</option><option>macOS</option></select></label><button class="button button-primary full-width" type="submit">COMPLETAR REGISTRO</button></form><div class="order-summary"><span>EDICIÓN</span><strong>Proyecto Génesis</strong><span>ACCESO</span><strong>Campaña completa</strong><hr><span>TOTAL</span><strong class="total">$0.00 MXN</strong></div></div></article>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto"><div class="footer-brand"><span class="brand-mark">G</span><div><strong>PROYECTO GÉNESIS</strong><p>Conecta. Descifra. Descubre la verdad.</p></div></div><div class="footer-info"><div><span class="kicker">HISTORIA</span><p>Una aventura narrativa cyberpunk sobre memoria, control y las decisiones que siguen vivas después del colapso.</p></div><div><span class="kicker">FICHA</span><p>Creación: 2026<br>Sistemas: Windows 10/11 y macOS<br>Tipo: Aventura / Puzzles</p></div><div><span class="kicker">MISIÓN Y VISIÓN</span><p>Misión: crear una experiencia inmersiva de exploración y lógica.<br>Visión: conectar a cada jugador con una historia que deje preguntas.</p></div><div><span class="kicker">CONTACTO</span><a class="email-link" href="mailto:d.ramirez.m319@edu.utc.mx">d.ramirez.m319@edu.utc.mx</a><p class="muted">Para soporte, colaboraciones y reportes.</p></div></div><div class="footer-bottom"><span>© 2026 PROYECTO GÉNESIS</span><span>ARCHIVO PÚBLICO · V1.0.0</span><button class="back-top" type="button" id="back-top">↑ VOLVER ARRIBA</button></div></footer>
+
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><div class="modal-dialog panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" data-close-modal aria-label="Cerrar">×</button><span class="kicker" id="modal-kicker">SISTEMA</span><h2 id="modal-title">Título del sistema</h2><div id="modal-content"></div></div></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
