@@ -17,8 +17,6 @@
 web/downloads/ProyectoGenesis-Windows/
 web/downloads/ProyectoGenesis-macOS/
 web/downloads/*.zip
-!web/downloads/ProyectoGenesis-Windows.zip
-!web/downloads/ProyectoGenesis-macOS.zip
 
 # PDF review scratch files
 tmp/
